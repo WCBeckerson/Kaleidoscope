@@ -59,7 +59,7 @@ _Overlap_
 
       ##Circle arrangement variables. default "nudge" is -0.1
       nudge = -.1
- 
+
 _Formatting text_
 • The text may not always appear where you would like or may appear too small depending on your datasets. The position of the text can be adjusted by manipulating the x and y coordinate values under ##text padding:
 
