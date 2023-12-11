@@ -8,13 +8,13 @@ The Kaleidoscope diagram is a modified Venn diagram designed to compare the dire
 
 **Formatting data**
 Unzip the compressed Kaleidoscope_v0.1.3 file.  
-You will need to compile your data from two separate RNAseq analyses pertaining to the same organism into two separate tables.
-These tables should each have 3 columns, “Treatment”, “Gene”, and “Change”.
-*If you change the names of these headers, the Rscript will have to be adjusted accordingly.*
-“Treatment” corresponds to the name for you study and should be the same for every entry in your file.
-“Gene” corresponds to the Gene ID with significant dysregulation.
-“Change” should either be “Up” or “Down” indicating the direction of dysregulation.
-*Τhis can be done quickly in excel by ordering the data by log2fold change and assigning the names Up/Down to all positive/negative values from the prospective of your treatment group.*
+You will need to compile your data from two separate RNAseq analyses pertaining to the same organism into two separate tables.  
+These tables should each have 3 columns, “Treatment”, “Gene”, and “Change”.  
+*If you change the names of these headers, the Rscript will have to be adjusted accordingly.*  
+“Treatment” corresponds to the name for you study and should be the same for every entry in your file.  
+“Gene” corresponds to the Gene ID with significant dysregulation.  
+“Change” should either be “Up” or “Down” indicating the direction of dysregulation.  
+*Τhis can be done quickly in excel by ordering the data by log2fold change and assigning the names Up/Down to all positive/negative values from the prospective of your treatment group.*  
 
 E.g.,      Study1						                  Study2
 Treatment	 Gene	      Change		    Treatment	Gene	      Change
@@ -23,24 +23,24 @@ Study1	   Gene_00002	Down		      Study2	  Gene_00002	Up
 Study1	   Gene_00003	Down		      Study2	  Gene_00003	Down
 Study1     Gene_00004	Up		        Study2	  Gene_00004	Down
  
-Save these document as separate .csv files in the unzipped Kaleidoscope folder.
+Save these document as separate .csv files in the unzipped Kaleidoscope folder.  
 
 **Running the script**
-Before generating the Kaleidoscope diagram, you must first input your file information into Kaleidoscope_script.R.
-Open the Kaleidoscope_script.R file using a text editing program, e.g., Notepad (windows) or TextEdit (mac)
-Enter the names of your .csv files here:
-      left <- read.csv("Study1.csv")
-      right <- read.csv("Study2.csv")
-Save the changes and open the edited Kaleidoscope_script.R file with RStudio
-In the top left quadrant of RStudio, click the "Source" button.
-If the data files are set up properly, the Rscript should run automatically and produce a Kaleidoscope diagram comparing the directionality of expression between your two studies.
-*The script will not run properly if there is not at least 1 unique gene ID for each group and at least 1 shared gene ID.*
+Before generating the Kaleidoscope diagram, you must first input your file information into Kaleidoscope_script.R.  
+Open the Kaleidoscope_script.R file using a text editing program, e.g., Notepad (windows) or TextEdit (mac).  
+Enter the names of your .csv files here:  
+      left <- read.csv("Study1.csv")  
+      right <- read.csv("Study2.csv")  
+Save the changes and open the edited Kaleidoscope_script.R file with RStudio  
+In the top left quadrant of RStudio, click the "Source" button.  
+If the data files are set up properly, the Rscript should run automatically and produce a Kaleidoscope diagram comparing the directionality of expression between your two studies.  
+*The script will not run properly if there is not at least 1 unique gene ID for each group and at least 1 shared gene ID.*  
  
 **User inputs**
-The Kaleidoscope_script.R file was designed to allow for customization of text, colors, and overlapping regions of the Venn diagram:
+The Kaleidoscope_script.R file was designed to allow for customization of text, colors, and overlapping regions of the Venn diagram:  
 
 _Color_
-The default colors settings are based on a color-blind-friendly pallet for perople with protanopia, deuteranopia, and tritanopia, but can be modified by changing the color hex codes corresponding to each region of the diagram:
+The default colors settings are based on a color-blind-friendly pallet for perople with protanopia, deuteranopia, and tritanopia, but can be modified by changing the color hex codes corresponding to each region of the diagram:  
       
       Right (r), Left (l), and Middle (m) circle colors
       r_col_upreg = "#7FD7F7"		#Top “upregulated” region of the right circle
