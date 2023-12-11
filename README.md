@@ -26,14 +26,14 @@ Study1     Gene_00004	Up		        Study2	  Gene_00004	Down
 Save these document as separate .csv files in the unzipped Kaleidoscope folder.
 
 **Running the script**
-Before generating the Kaleidoscope diagram, you must first input your file information into Kaleidoscope_script.R.
-Open the Kaleidoscope_script.R file using a text editing program, e.g., Notepad (windows) or TextEdit (mac)
-Enter the names of your .csv files here:
+*Before generating the Kaleidoscope diagram, you must first input your file information into Kaleidoscope_script.R.
+*Open the Kaleidoscope_script.R file using a text editing program, e.g., Notepad (windows) or TextEdit (mac)
+*Enter the names of your .csv files here:
       left <- read.csv("Study1.csv")
       right <- read.csv("Study2.csv")
-Save the changes and open the edited Kaleidoscope_script.R file with RStudio
-In the top left quadrant of RStudio, click the "Source" button.
-If the data files are set up properly, the Rscript should run automatically and produce a Kaleidoscope diagram comparing the directionality of expression between your two studies.
+*Save the changes and open the edited Kaleidoscope_script.R file with RStudio
+*In the top left quadrant of RStudio, click the "Source" button.
+*If the data files are set up properly, the Rscript should run automatically and produce a Kaleidoscope diagram *comparing the directionality of expression between your two studies.
 *The script will not run properly if there is not at least 1 unique gene ID for each group and at least 1 shared gene ID.*
  
 **User inputs**
