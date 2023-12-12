@@ -9,12 +9,10 @@ The Kaleidoscope diagram is a modified Venn diagram designed to compare the dire
 **Formatting data**  
 Unzip the compressed Kaleidoscope_v0.1.3 file.  
 You will need to compile your data from two separate RNAseq analyses pertaining to the same organism into two separate tables.  
-These tables should each have 3 columns, “Treatment”, “Gene”, and “Change”.  
-  *If you change the names of these headers, the Rscript will have to be adjusted accordingly.*  
+These tables should each have 3 columns, “Treatment”, “Gene”, and “Change”. *If you change the names of these headers, the Rscript will have to be adjusted accordingly.*  
 “Treatment” corresponds to the name for you study and should be the same for every entry in your file.  
 “Gene” corresponds to the Gene ID with significant dysregulation.  
-“Change” should either be “Up” or “Down” indicating the direction of dysregulation.  
-  *Τhis can be done quickly in excel by ordering the data by log2fold change and assigning the names Up/Down to all positive/negative values from the prospective of your treatment group.*  
+“Change” should either be “Up” or “Down” indicating the direction of dysregulation. *Τhis can be done quickly in excel by ordering the data by log2fold change and assigning the names Up/Down to all positive/negative values from the prospective of your treatment group.*  
 
 E.g.,      Study1						                     Study2
 Treatment	 Gene	      Change		    Treatment	Gene	      Change
