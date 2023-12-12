@@ -16,12 +16,12 @@ These tables should each have 3 columns, “Treatment”, “Gene”, and “Cha
 “Change” should either be “Up” or “Down” indicating the direction of dysregulation.  
 *Τhis can be done quickly in excel by ordering the data by log2fold change and assigning the names Up/Down to all positive/negative values from the prospective of your treatment group.*  
 
-E.g.,      Study1						                  Study2
+E.g.,      Study1						                     Study2
 Treatment	 Gene	      Change		    Treatment	Gene	      Change
-Study1	   Gene_00001	Up		        Study2	  Gene_00001	Up
-Study1	   Gene_00002	Down		      Study2	  Gene_00002	Up
-Study1	   Gene_00003	Down		      Study2	  Gene_00003	Down
-Study1     Gene_00004	Up		        Study2	  Gene_00004	Down
+Study1	    Gene_00001	Up		        Study2	   Gene_00001	Up
+Study1	    Gene_00002	Down		      Study2	   Gene_00002	Up
+Study1	    Gene_00003	Down		      Study2	   Gene_00003	Down
+Study1     Gene_00004	Up		        Study2	   Gene_00004	Down
  
 Save these document as separate .csv files in the unzipped Kaleidoscope folder.  
 
