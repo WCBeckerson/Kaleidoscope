@@ -35,7 +35,7 @@ Save the changes and open the edited Kaleidoscope_script.R file with RStudio
 In the top left quadrant of RStudio, click the "Source" button.  
 If the data files are set up properly, the Rscript should run automatically and produce a Kaleidoscope diagram comparing the directionality of expression between your two studies.  
 *The script will not run properly if there is not at least 1 unique gene ID for each group and at least 1 shared gene ID.*  
- 
+
 **User inputs**  
 The Kaleidoscope_script.R file was designed to allow for customization of text, colors, and overlapping regions of the Venn diagram:  
 
