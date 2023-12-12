@@ -7,14 +7,14 @@ How to use Kaleidoscope R script
 The Kaleidoscope diagram is a modified Venn diagram designed to compare the directionality of shared and unique sets of dysregulated genes from two different RNAseq analyses related to the same species. While a traditional Venn diagram can depict the number of genes that are shared or unique between two RNAseq analyses, the Kaleidoscope diagram takes things one step further by dividing these groups into up/downregulated categories. In the outer circles representing the dysregulated genes unique to each group, the number of upregulated genes is labeled in the top lighter regions while the number of downregulated genes is labeled in the bottom darker regions. The relative ratio of each is also represented by a horizontal midline that scales vertically along the height of the circle’s diameter. The overlapping region representing the dysregulated genes shared between the two groups is divided into four quadrants; the bottom darker quadrant representing the genes that are downregulated in both groups, the top lighter quadrant representing the genes that are upregulated in both groups, the left light quadrant with text sharing the same color as the left group representing genes that are upregulated in the left group but downregulated in the right group, and the right light quadrant with text sharing the same color as the right group representing genes that are upregulated in the right group but downregulated in the left group.
 
 **Formatting data**  
-*Unzip the compressed Kaleidoscope_v0.1.3 file.  
-*You will need to compile your data from two separate RNAseq analyses pertaining to the same organism into two separate tables.  
-*These tables should each have 3 columns, “Treatment”, “Gene”, and “Change”.  
-**If you change the names of these headers, the Rscript will have to be adjusted accordingly.*  
-*“Treatment” corresponds to the name for you study and should be the same for every entry in your file.  
-*“Gene” corresponds to the Gene ID with significant dysregulation.  
-*“Change” should either be “Up” or “Down” indicating the direction of dysregulation.  
-**Τhis can be done quickly in excel by ordering the data by log2fold change and assigning the names Up/Down to all positive/negative values from the prospective of your treatment group.*  
+Unzip the compressed Kaleidoscope_v0.1.3 file.  
+You will need to compile your data from two separate RNAseq analyses pertaining to the same organism into two separate tables.  
+These tables should each have 3 columns, “Treatment”, “Gene”, and “Change”.  
+*If you change the names of these headers, the Rscript will have to be adjusted accordingly.*  
+“Treatment” corresponds to the name for you study and should be the same for every entry in your file.  
+“Gene” corresponds to the Gene ID with significant dysregulation.  
+“Change” should either be “Up” or “Down” indicating the direction of dysregulation.  
+*Τhis can be done quickly in excel by ordering the data by log2fold change and assigning the names Up/Down to all positive/negative values from the prospective of your treatment group.*  
 
 E.g.,      Study1						                     Study2
 Treatment	 Gene	      Change		    Treatment	Gene	      Change
@@ -25,7 +25,7 @@ Study1     Gene_00004	Up		        Study2	   Gene_00004	Down
  
 Save these document as separate .csv files in the unzipped Kaleidoscope folder.  
 
-**Running the script**
+**Running the script**  
 Before generating the Kaleidoscope diagram, you must first input your file information into Kaleidoscope_script.R.  
 Open the Kaleidoscope_script.R file using a text editing program, e.g., Notepad (windows) or TextEdit (mac).  
 Enter the names of your .csv files here:  
@@ -36,7 +36,7 @@ In the top left quadrant of RStudio, click the "Source" button.
 If the data files are set up properly, the Rscript should run automatically and produce a Kaleidoscope diagram comparing the directionality of expression between your two studies.  
 *The script will not run properly if there is not at least 1 unique gene ID for each group and at least 1 shared gene ID.*  
  
-**User inputs**
+**User inputs**  
 The Kaleidoscope_script.R file was designed to allow for customization of text, colors, and overlapping regions of the Venn diagram:  
 
 _Color_
